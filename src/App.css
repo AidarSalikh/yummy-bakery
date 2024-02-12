@@ -30,8 +30,6 @@ main {
 .cat-nav,
 .shop-nav {
   margin-top: 1rem;
-  position: sticky;
-  top: 96px;
 }
 
 .shop-nav {
@@ -51,6 +49,11 @@ main {
 }
 
 /* SHOP NAV MOBILE */
+
+.cat-nav {
+  position: sticky;
+  top: 96px;
+}
 
 .slider-link {
   border: 1px solid black;
