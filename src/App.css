@@ -55,6 +55,9 @@ main {
   grid-auto-flow: column;
   /* grid-auto-columns: 30%; */
 
+  position: sticky;
+  top: 96px;
+
   overflow-x: auto;
   overscroll-behavior-inline: contain;
 
