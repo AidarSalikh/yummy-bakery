@@ -77,7 +77,7 @@ function SliderContainer() {
   //   };
 
   return (
-    <div className="slider-container">
+    <div className="cat-nav">
       <Slider {...settings}>
         {linksArray.map((link) => {
           return <CategoryLink key={link.name} {...link} />;

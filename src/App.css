@@ -26,8 +26,15 @@ main {
 }
 
 /* SHOP NAVBAR */
+
+.cat-nav,
 .shop-nav {
   margin-top: 1rem;
+  position: sticky;
+  top: 96px;
+}
+
+.shop-nav {
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -45,15 +52,12 @@ main {
 
 /* SHOP NAV MOBILE */
 
-
 .slider-link {
-  /* width: 60px; */
   border: 1px solid black;
   border-radius: 10px;
   padding: 5px 10px;
   background-color: #aab9b4;
 
-  width: auto;
   margin: 8px;
   text-align: center;
 }
