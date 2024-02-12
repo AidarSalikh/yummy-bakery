@@ -7,13 +7,14 @@
 .navbar {
   background: #19191a;
   height: 80px;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 1;
 }
 
 .navbar-container {
@@ -103,9 +104,9 @@
 }
 
 @media screen and (max-width: 960px) {
-  .NavbarItems {
+  /* .NavbarItems {
     position: relative;
-  }
+  } */
 
   .nav-menu {
     display: flex;

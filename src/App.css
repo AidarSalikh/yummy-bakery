@@ -8,6 +8,7 @@
 
 body {
   background-color: #f9f9f9;
+  padding-top: 80px;
 }
 
 .App {
@@ -41,6 +42,38 @@ main {
   text-decoration: none;
   color: black;
 }
+
+/* SHOP NAV MOBILE */
+
+
+.slider-link {
+  /* width: 60px; */
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #aab9b4;
+
+  width: auto;
+  margin: 8px;
+  text-align: center;
+}
+
+.slider-link a {
+  text-decoration: none;
+  color: black;
+}
+
+/* .category-slider {
+  background-color: aqua;
+}
+
+.category-slider a {
+  text-decoration: none;
+  color: black;
+  display: block;
+
+  background-color: #006946;
+} */
 
 /* CARDS LIST */
 
@@ -129,6 +162,7 @@ main {
   height: 100vh;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+  z-index: 2;
 }
 
 .modal {
@@ -137,7 +171,7 @@ main {
   width: 100%;
   height: fit-content;
   max-width: 800px;
-  background-color: #ccd2d0;
+  background-color: #006946;
   position: relative;
   border: 5px;
   box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.75);
