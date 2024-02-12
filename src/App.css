@@ -27,7 +27,7 @@ main {
 
 /* SHOP NAVBAR */
 
-.cat-nav,
+.category-nav,
 .shop-nav {
   margin-top: 1rem;
 }
@@ -49,6 +49,24 @@ main {
 }
 
 /* SHOP NAV MOBILE */
+
+.category-nav {
+  display: grid;
+  grid-auto-flow: column;
+  /* grid-auto-columns: 30%; */
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.category-nav::-webkit-scrollbar {
+  display: none;
+}
+
+/*  */
 
 .cat-nav {
   position: sticky;
