@@ -5,9 +5,9 @@ import { useSelector } from "react-redux";
 function Cart() {
   const totalPrice = useSelector(getTotalPrice);
   return (
-    <main>
+    <main className="cart">
       <CartList />
-      <p>Total: {totalPrice}</p>
+      <h4>Сумма заказа: {totalPrice}</h4>
     </main>
   );
 }

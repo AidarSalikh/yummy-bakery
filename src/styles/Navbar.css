@@ -108,6 +108,11 @@
     position: relative;
   } */
 
+  .navbar {
+    top: -10px;
+    /* added top -10px */
+  }
+
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -159,7 +164,8 @@
   .menu-icon {
     display: block;
     position: absolute;
-    top: 0;
+    top: 5px;
+    /* changed top from 0 */
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;

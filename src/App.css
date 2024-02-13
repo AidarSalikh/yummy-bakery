@@ -8,21 +8,17 @@
 
 body {
   background-color: #f9f9f9;
-  padding-top: 80px;
 }
 
 .App {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  padding-top: 80px;
 }
 
 main {
   flex-grow: 1;
-}
-
-.cart {
-  margin-left: auto;
 }
 
 /* SHOP NAVBAR */
@@ -56,7 +52,7 @@ main {
   /* grid-auto-columns: 30%; */
 
   position: sticky;
-  top: 96px;
+  top: 75px;
 
   overflow-x: auto;
   overscroll-behavior-inline: contain;
@@ -71,16 +67,11 @@ main {
 
 /*  */
 
-.cat-nav {
-  position: sticky;
-  top: 96px;
-}
-
 .slider-link {
   border: 1px solid black;
   border-radius: 10px;
   padding: 5px 10px;
-  background-color: #aab9b4;
+  background-color: #aab9b4af;
 
   margin: 8px;
   text-align: center;
@@ -91,22 +82,10 @@ main {
   color: black;
 }
 
-/* .category-slider {
-  background-color: aqua;
-}
-
-.category-slider a {
-  text-decoration: none;
-  color: black;
-  display: block;
-
-  background-color: #006946;
-} */
-
 /* CARDS LIST */
 
 .product-list {
-  margin-top: 2rem;
+  /* margin-top: 1rem; */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
@@ -139,7 +118,7 @@ main {
   box-shadow: -1px 3px 10px #0000001f;
 }
 
-.card-buttons {
+.product-card--btn-container {
   border-top: 1px solid rgb(209, 207, 207);
   padding-top: 5px;
   height: 2rem;
@@ -149,7 +128,7 @@ main {
   justify-content: space-between;
 }
 
-.add-to-cart-btn {
+.product-card--add-to-cart-btn {
   background: none;
   font-size: 18px;
   outline: none;
@@ -157,18 +136,18 @@ main {
   cursor: pointer;
 }
 
-.card-product-price {
+.product-card--price {
   font-size: 18px;
 }
 
-.add-remove {
+.product-card--add-remove {
   display: flex;
   justify-content: center;
   gap: 2rem;
   align-items: center;
 }
 
-.add-remove-icon {
+.product-card--add-remove-icon {
   font-size: 2rem;
   cursor: pointer;
   color: rgb(142, 234, 14);
@@ -178,9 +157,11 @@ main {
   transform: scale(0.9);
 }
 
-.count {
+.product-card--count {
   position: absolute;
 }
+
+/* MODAL */
 
 .modal-wrapper {
   position: fixed;
@@ -268,6 +249,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 
 .cart-item-buttons button {
@@ -292,7 +274,7 @@ main {
   background-color: rgb(190, 122, 33);
   border-radius: 2rem;
   width: 90vw;
-  text-align: center;
+  /* text-align: center; */
   position: fixed;
   font-size: 1rem;
   font-weight: bolder;
@@ -304,4 +286,24 @@ main {
   bottom: 5vh;
   left: 50%;
   transform: translate(-50%);
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  /* align-items: center; */
+}
+
+/* SINGLE ITEM PAGE */
+
+.singleItemPage-container {
+  padding: 1rem;
+}
+
+.singleItemPage-container a {
+  text-decoration: none;
+  color: #2b31cc;
+  font-size: 1rem;
+  font-weight: bolder;
+  cursor: pointer;
+  display: block;
 }

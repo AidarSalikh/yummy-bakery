@@ -2,9 +2,10 @@ import { useSelector } from "react-redux";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { getTotalPrice, selectAllItems } from "../../features/shop/shopSlice";
 import useWindowSize from "../../hooks/useWindowSize";
-import SliderContainer from "./SliderContainer";
 import CategoryList from "./CategoryList";
 import CategorySlider from "./CategorySlider";
+import { FaBasketShopping } from "react-icons/fa6";
+import digitFormatter from "../../utils/digitFormatter";
 
 function Shop() {
   const shopItems = useSelector(selectAllItems);
@@ -18,13 +19,13 @@ function Shop() {
     <main className="shop">
       {mobile ? <CategorySlider /> : <CategoryList />}
       <Outlet />
-      {cartCount && mobile && (
+      {!!cartCount && mobile && (
         <NavLink to={"/cart"} className="mobile-cart-fixed">
-          В КОРЗИНЕ {cartCount} ТОВАРА НА {totalPrice}
+          <span>Мой заказ - {digitFormatter(totalPrice)} &#8381;</span>
+
+          <FaBasketShopping size={"22"} />
         </NavLink>
       )}
-
-      {/* <ProductItemsList /> */}
     </main>
   );
 }

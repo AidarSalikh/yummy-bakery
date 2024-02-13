@@ -25,21 +25,27 @@ function ProductItem({ id, name, body, image, count, price, category }) {
       <Link to={`/shop/${category}/${id}`} state={prevLocation}>
         <img src={image} alt="product image" />
       </Link>
-      <div className="card-content">
+      <div>
         <p>{name}</p>
         <p>{body}</p>
       </div>
-      <div className="card-buttons">
-        <p className="card-product-price">{price} &#8381;</p>
+      <div className="product-card--btn-container">
+        <p className="product-card--price">{price} &#8381;</p>
         {!count ? (
-          <button onClick={addItem} className="add-to-cart-btn">
+          <button onClick={addItem} className="product-card--add-to-cart-btn">
             В КОРЗИНУ
           </button>
         ) : (
-          <div className="add-remove">
-            <FaSquareMinus onClick={removeItem} className="add-remove-icon" />
-            <p className="count">{count}</p>
-            <FaSquarePlus onClick={addItem} className="add-remove-icon" />
+          <div className="product-card--add-remove">
+            <FaSquareMinus
+              onClick={removeItem}
+              className="product-card--add-remove-icon"
+            />
+            <p className="product-card--count">{count}</p>
+            <FaSquarePlus
+              onClick={addItem}
+              className="product-card--add-remove-icon"
+            />
           </div>
         )}
       </div>

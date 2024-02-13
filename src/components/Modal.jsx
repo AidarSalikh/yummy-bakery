@@ -51,9 +51,9 @@ export function Modal() {
             Add to Cart
           </button>
         ) : (
-          <div className="add-remove">
+          <div className="modal--add-remove">
             <button onClick={removeItem}>-</button>
-            <p className="count">{singleItem.count}</p>
+            <p className="modal--count">{singleItem.count}</p>
             <button onClick={addItem}>+</button>
           </div>
         )}
