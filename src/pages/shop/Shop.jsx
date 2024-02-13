@@ -20,7 +20,7 @@ function Shop() {
       {mobile ? <CategorySlider /> : <CategoryList />}
       <Outlet />
       {!!cartCount && mobile && (
-        <NavLink to={"/cart"} className="mobile-cart-fixed">
+        <NavLink to={"/cart"} className="shop--mobile-cart-fixed">
           <span>Мой заказ - {digitFormatter(totalPrice)} &#8381;</span>
 
           <FaBasketShopping size={"22"} />
