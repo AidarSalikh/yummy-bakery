@@ -26,7 +26,7 @@ function ProductItem({ id, name, body, image, count, price, category }) {
         <img src={image} alt="product image" />
       </Link>
       <div>
-        <p>{name}</p>
+        <h4>{name}</h4>
         <p>{body}</p>
       </div>
       <div className="product-card--btn-container">

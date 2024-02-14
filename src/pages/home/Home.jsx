@@ -1,9 +1,27 @@
-import React from 'react'
+import React, { useState } from "react";
+import HomePageSlider from "./HomePageSlider";
+import { Link } from "react-router-dom";
+import Popular from "./Popular";
+import Categories from "./Categories";
 
 function Home() {
+  const [showList, setShowList] = useState("popular");
+
+  const showPopular = () => setShowList("popular");
+  const showCategories = () => setShowList("category");
+
   return (
-    <main>Home</main>
-  )
+    <main>
+      <HomePageSlider />
+      <div className="homepage--buttons-container">
+        <button onClick={showPopular}>Популярное</button>
+        <button onClick={showCategories}>Категории</button>
+      </div>
+      <div className="homepage--cards-container">
+        {showList === "popular" ? <Popular /> : <Categories />}
+      </div>
+    </main>
+  );
 }
 
-export default Home
+export default Home;
