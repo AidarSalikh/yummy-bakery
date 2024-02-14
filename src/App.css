@@ -247,7 +247,7 @@ main {
   border-radius: 50%;
 }
 
-.cart-item-buttons {
+.cart-item--add-remove {
   margin-left: auto;
   display: flex;
   flex-direction: column;
@@ -255,19 +255,13 @@ main {
   align-items: center;
 }
 
-.cart-item-buttons button {
-  background-color: rgb(233, 193, 141);
-  /* align-items: center; */
-  border: none;
-  border-radius: 5px;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 1rem;
-
+.cart-item--add-remove-icon {
+  font-size: 2rem;
   cursor: pointer;
+  color: rgb(231, 206, 20);
 }
 
-.cart-item-buttons button:active {
+.cart-item--add-remove-icon:active {
   transform: scale(0.9);
 }
 
@@ -344,4 +338,40 @@ main {
   font-weight: bolder;
   cursor: pointer;
   display: block;
+}
+
+/* ABOUT */
+
+.about {
+  padding: 0.5rem 1rem;
+}
+.about--content {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Google Map Responsive */
+
+.map-responsive {
+  margin-top: 2rem;
+  overflow: hidden;
+  padding-bottom: 52.6%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  border: 0;
+  width: 50%;
+  position: absolute;
+}
+@media screen and (max-width: 960px) {
+  .map-responsive iframe {
+    height: 100%;
+    width: 100%;
+  }
 }
