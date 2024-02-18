@@ -3,6 +3,7 @@ import HomePageSlider from "./HomePageSlider";
 import { Link } from "react-router-dom";
 import Popular from "./Popular";
 import Categories from "./Categories";
+import Instructions from "./Instructions";
 
 function Home() {
   const [showList, setShowList] = useState("popular");
@@ -20,6 +21,7 @@ function Home() {
       <div className="homepage--cards-container">
         {showList === "popular" ? <Popular /> : <Categories />}
       </div>
+      <Instructions />
     </main>
   );
 }

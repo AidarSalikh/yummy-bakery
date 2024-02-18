@@ -8,6 +8,7 @@ import "../styles/Navbar.css";
 import { useSelector } from "react-redux";
 import useWindowSize from "../hooks/useWindowSize";
 import digitFormatter from "../utils/digitFormatter";
+import cakeLogo from ".//..//assets/images/cake-logo.png";
 
 function Nav() {
   const [openNav, setOpenNav] = useState(false);
@@ -33,8 +34,9 @@ function Nav() {
       <nav className="navbar">
         <div className="navbar-container container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            Logo
+            <img src={cakeLogo} alt="" className="navbar-logo--img" />
           </Link>
+
           <div className="menu-icon" onClick={handleClick}>
             {openNav ? <FaTimes /> : <FaBars />}
           </div>
@@ -50,7 +52,7 @@ function Nav() {
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Shop
+                Каталог
               </NavLink>
             </li>
             <li className="nav-item">
@@ -59,7 +61,7 @@ function Nav() {
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                About
+                О нас
               </NavLink>
             </li>
             <li className="nav-item cart-icon">
@@ -70,7 +72,7 @@ function Nav() {
               >
                 {width < 768 ? (
                   <>
-                    Cart
+                    Корзина
                     {price}
                   </>
                 ) : (

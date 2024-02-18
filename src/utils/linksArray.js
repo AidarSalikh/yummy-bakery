@@ -3,6 +3,6 @@ export const linksArray = [
   { link: "cakes", name: "Торты" },
   { link: "trifles", name: "Трайфалы" },
   { link: "merengue", name: "Меренговый" },
-  { link: "trifles", name: "Трайфалы" },
-  { link: "trifles", name: "Трайфалы" },
+  { link: "trifles", name: "Печенье" },
+  { link: "trifles", name: "Синабоны" },
 ];
